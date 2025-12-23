@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/sample-grpc-server/src",
+  "sourceRoot": "apps/apigateway/src",
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/sample-grpc-server/tsconfig.app.json"
+    "tsConfigPath": "apps/apigateway/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/sample-grpc-server",
+  "root": "apps/apigateway",
   "projects": {
     "auth": {
       "type": "application",
@@ -19,13 +19,13 @@
         "tsConfigPath": "apps/auth/tsconfig.app.json"
       }
     },
-    "sample-grpc-server": {
+    "apigateway": {
       "type": "application",
-      "root": "apps/sample-grpc-server",
+      "root": "apps/apigateway",
       "entryFile": "main",
-      "sourceRoot": "apps/sample-grpc-server/src",
+      "sourceRoot": "apps/apigateway/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/sample-grpc-server/tsconfig.app.json"
+        "tsConfigPath": "apps/apigateway/tsconfig.app.json"
       }
     }
   }
